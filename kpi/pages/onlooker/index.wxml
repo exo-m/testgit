@@ -19,11 +19,11 @@
                 <text class="list_header_num">+3</text>
               </view>
               <view class="list_top_con">电视剧佛i啊我个我让你估计给人感觉鞥哦i热管那个狗i而个i还能年糕</view>
-              <view class="list_top_works"><text>亲</text><text>赏</text><text>评</text></view>
+              <view class="list_top_works"><view class="work_item"><text class="iconfont icon-zuichun"></text>亲</view><view class="work_item"><text class="iconfont icon-dashang"></text>赏</view><view class="work_item"><text class="iconfont icon-pinglun"></text>评</view></view>
             </view>
           </view>
           <view class="list_list">
-            <text class="zan"></text>
+            <text class="zan iconfont icon-icon5"></text>
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
@@ -31,7 +31,7 @@
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
           </view>
           <view class="list_list">
-            <text class="zan"></text>
+            <text class="zan iconfont icon-icon5"></text>
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
@@ -56,11 +56,11 @@
                 <text class="list_header_num">+3</text>
               </view>
               <view class="list_top_con">电视剧佛i啊我个我让你估计给人感觉鞥哦i热管那个狗i而个i还能年糕</view>
-              <view class="list_top_works"><text>亲</text><text>赏</text><text>评</text></view>
+              <view class="list_top_works"><view class="work_item"><text class="iconfont icon-zuichun"></text>亲</view><view class="work_item"><text class="iconfont icon-dashang"></text>赏</view><view class="work_item"><text class="iconfont icon-pinglun"></text>评</view></view>
             </view>
           </view>
           <view class="list_list">
-            <text class="zan"></text>
+            <text class="zan iconfont icon-icon5"></text>
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
@@ -68,7 +68,7 @@
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
           </view>
           <view class="list_list">
-            <text class="zan"></text>
+            <text class="zan iconfont icon-icon5"></text>
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
             <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>

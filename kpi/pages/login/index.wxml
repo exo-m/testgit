@@ -1,12 +1,16 @@
 <view class="container">
   <view class="loginwrap">
+    <view class="login_header">
+      <image src="../../images/logo.png" class="logo"></image>
+      <view class="login_title">技术部考核</view>
+    </view>
     <view class="loginCon">
         <view class="section">
-          <view class="section_icon"></view>
+          <view class="section_icon iconfont icon-dengluyonghu"></view>
           <input name="name" placeholder="请输入姓名" />
         </view>
         <view class="section">
-          <view class="section_icon"></view>
+          <view class="section_icon iconfont icon-password"></view>
           <input name="password" placeholder="请输入密码" />
         </view>
         <view class="section_gap">
@@ -16,4 +20,5 @@
         <view class="btn-area" bindtap="bindSubmit">登录</view>
     </view>
   </view>
+  <image src="../../images/bg.jpg" class="bg_img"></image>
 </view>

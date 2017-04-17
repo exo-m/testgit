@@ -7,10 +7,15 @@
         <view class="user_pro">UI设计师</view>
         <view class="user_num">18分</view>
       </view>
+      <view class="admin_wrap">
+        <view class="admin_item admin_item1" bindtap="reword">记分</view>
+        <view class="admin_item admin_item2">变更</view>
+        <view class="admin_item admin_item3">离职</view>
+      </view>
       <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="user_img {{scrollFlag ? 'active' : ''}}"></image>
     </view>
     <!--<view class="listswrap">-->
-      <scroll-view class="scroll-view" scroll-y="true" bindscroll="scrollHandler">
+      <scroll-view class="scroll-viewactive" scroll-y="true" bindscroll="scrollHandler">
         <view class="br"></view>
         <view class="list-item">
           <view class="list_top">
@@ -114,5 +119,35 @@
       </scroll-view>
     <!--</view>-->
   </view>
+  <view hidden="{{actionSheetHidden}}" bindtap="actionSheethid" class="actionSheet_con">
+    <view class="shite_item paddingtop">
+        <view class="phone_one" bindtap="clickTypes">
+            <view class="phone_personal">{{types_title}}</view>
+        </view>
+        <view class="person_box" hidden="{{selectType}}">
+            <view class="select_one" bindtap="mySelecttype" data-me="A类Bug">A类Bug</view>
+            <view class="select_one" bindtap="mySelecttype" data-me="B类Bug">B类Bug</view>
+            <view class="select_one" bindtap="mySelecttype" data-me="C类Bug">C类Bug</view>
+            <view class="select_one" bindtap="mySelecttype" data-me="其他">其他</view>
+        </view>
+    </view>
+    <view class="shite_item">
+        <view class="phone_one" bindtap="clickNumber">
+            <view class="phone_personal">{{num_title}}</view>
+        </view>
+        <view class="person_box" hidden="{{selectNumber}}">
+            <view class="select_one" bindtap="mySelectnum" data-me="6分">6分</view>
+            <view class="select_one" bindtap="mySelectnum" data-me="3分">3分</view>
+            <view class="select_one" bindtap="mySelectnum" data-me="2分">2分</view>
+            <view class="select_one" bindtap="mySelectnum" data-me="1分">1分</view>
+        </view>
+    </view>
+    <view class="shite_item shite_area">
+        <textarea class="text-area" cursor-spacing="100" placeholder="说明：" />
+    </view>
+    <view class="shite_item doworks">
+        <view class="confirm">确认</view>
+        <view class="remain">重置</view>
+    </view>
 </view>
-
+</view>

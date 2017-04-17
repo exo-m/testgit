@@ -7,7 +7,8 @@ Page({
   //事件处理函数
   bindSubmit: function() {
     console.log(12)
-    wx.redirectTo({
+    // wx.navigateBack();
+    wx.switchTab({
       url: '../index/index'
     })
   },

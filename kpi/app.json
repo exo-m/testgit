@@ -1,10 +1,12 @@
 {
   "pages":[
+    "pages/details/index",
+    "pages/login/index",
     "pages/index/index",
     "pages/onlooker/index",
     "pages/contact/index",
-    "pages/my/index",
-    "pages/login/index"
+    "pages/my/index"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -13,18 +15,28 @@
     "navigationBarTextStyle":"white"
   },
   "tabBar":{
+    "color": "#9B9B9B",
+    "selectedColor": "#06C98F",
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "头条"
+      "text": "头条",
+      "iconPath": "./images/t1.png",
+      "selectedIconPath": "./images/t1_a.png"
     },{
       "pagePath": "pages/onlooker/index",
-      "text": "围观"
+      "text": "围观",
+      "iconPath": "./images/t2.png",
+      "selectedIconPath": "./images/t2_a.png"
     },{
       "pagePath": "pages/contact/index",
-      "text": "联系人"
+      "text": "联系人",
+      "iconPath": "./images/t3.png",
+      "selectedIconPath": "./images/t3_a.png"
     },{
       "pagePath": "pages/my/index",
-      "text": "我的"
+      "text": "我的",
+      "iconPath": "./images/t4.png",
+      "selectedIconPath": "./images/t4_a.png"
     }]
   }
 }

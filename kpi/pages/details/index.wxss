@@ -1,0 +1,230 @@
+.container {
+    background-color: #fff;
+}
+.img_bg {
+    width: 100%;
+    background-image: url("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 200px; 
+    -webkit-filter: blur(2px);
+}
+.myContainer {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+    background-color: #fff;
+}
+.myContainer.active {
+    top: 0;
+}
+.user_wrap {
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+}
+.admin_wrap {
+    height: 34px;
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-around;
+}
+.admin_item {
+    width: 27%;
+    color: #fff;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 3px;
+}
+.admin_item1 {
+    background-color: #02C98E;
+}
+.admin_item2 {
+    background-color: #FFCC00;
+}
+.admin_item3 {
+    background-color: #FF908F;
+}
+.user_con {
+    width: 70%;
+    float: right;
+    position: relative;
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.user_name {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+.user_pro {
+    color: #999999;
+    font-size: 16px;
+}
+.user_num {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: #09C990;
+}
+.user_img {
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: block;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+.user_img.active {
+    top: 20px;
+}
+.scroll-viewactive {
+    width: 100%;
+    height: -webkit-calc(100vh - 154px);
+    height: calc(100vh - 154px);
+}
+.list-item {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+}
+.list_bot, .list_top {
+    margin: 0 auto;
+    width: 90%;
+}
+.list_bot {
+    margin-top: 10px;
+    height: 30px;
+    color: #333;
+    position: relative;
+}
+.list_num {
+    font-size: 22px;
+    color: #09C990;
+    position: absolute;
+    top: -5px;
+    right: 10px;
+}
+.list_num.list_num_down {
+    color: #FE6663;
+}
+.list_time {
+    font-size: 14px;
+    color: #999999;
+}
+.shite_item {
+    margin: 20px auto;
+    width: 100%;
+    position: relative;
+}
+.phone_personal{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.phone_one{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 90%;
+  padding-left: 10px;
+  height: 100rpx;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  border: 1px solid #DFDFDF;
+  color: #B5B5B5;
+}
+.person_box{
+  position: absolute;
+  top: 52px;
+  left: 0px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10000;
+  overflow: auto;
+  height: 153px;
+}
+.select_one{
+  text-align: center;
+  width:676rpx;
+  height:100rpx;
+  line-height:100rpx;
+  margin:0 5%;
+  border-bottom:2rpx solid #eee;
+}
+.personal_image{
+  z-index: 100;
+  position: absolute;
+  right:2.5%;
+  width: 34rpx;
+  height: 20rpx;
+  margin:40rpx 20rpx 40rpx 0;
+  transition: All 0.4s ease; 
+  -webkit-transition: All 0.4s ease;
+}
+.rotateRight{
+  transform: rotate(180deg);
+}
+.shite_area {
+    height: 100px;
+    position: relative;
+    width: 90%;
+}
+.text-area {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #DFDFDF;
+    border-radius: 10rpx;
+    color: #333;
+    padding-left: 10px;
+    z-index: 100;
+    padding-top: 6px;
+}
+.doworks {
+    width: 90%;
+    margin: 60px auto 40px;
+    overflow: hidden;
+}
+.doworks view {
+    width: 42%;
+    line-height: 36px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 3px;
+}
+.confirm {
+    float: left;
+    background-color: #02C98E;
+}
+.remain {
+    float: right;
+    background-color: #FFCC00;
+}
+.paddingtop {
+    margin-top: 30px;
+}
+.actionSheet_con {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.5);
+}

@@ -104,14 +104,29 @@
   margin: 15px auto;
 }
 .list_top_works {
-  color: #02C98D;
-  font-size: 18px;
-}
-.list_top_works {
   color: #01C88D;
+  overflow: hidden;
+  height: 28px;
+  line-height: 28px;
+  font-size: 16px;
 }
-.list_top_works text {
+.list_top_works .work_item {
   margin-right: 20px;
+  float: left;
+  width: 40px;
+  text-align: right;
+  position: relative;
+}
+.list_top_works .iconfont {
+  font-size: 20px;
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  text-align: center;
+  margin-right: 2px;
+}
+.list_top_works .iconfont.icon-dashang {
+  font-size: 24px;
 }
 .list_list {
   width: 100%;
@@ -121,11 +136,14 @@
 }
 .zan {
   float: left;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   margin-right: 15px;
-  margin-top: 15px;
-  border: 1px solid red;
+  margin-top: 13px;
+  color: #01C88D;
+  font-size: 22px;
+  text-align: center;
+  line-height: 24px;
 }
 .list_list_pro {
   float: left;
