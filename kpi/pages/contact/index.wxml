@@ -1,0 +1,123 @@
+<view class="container">
+  <view class="contact_wrap">
+    <view class="page__bd">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="searchbar-result" wx:if="{{inputVal.length > 0}}">
+            <navigator url="" class="res">
+                <view class="res_bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="res">
+                <view class="res_bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="res">
+                <view class="res_bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="res">
+                <view class="res_bd">
+                    <view>实时搜索文本</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class="br"></view>
+    <view class="list-wrap">
+        <scroll-view scroll-y="true" class="scrool-wrap">
+            <view class="list_item {{showflag1 ? 'active' : ''}}">
+                <view class="list_header" bindtap="clickshow1">技术部-产品组（8）<image src="../../images/arrow.png" class="icon_arrow {{showflag1 ? 'icon_active' : ''}}"></image></view>
+                <view class="weui-cells {{showflag1 ? 'active' : ''}}">
+                    <navigator url="" class="weui-cell weui-cell_access">
+                        <image class="weui-cell_img" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg"></image>
+                        <view class="weui-cell_right">
+                            <view class="weui-cell__bd">纪志军</view>
+                            <view class="weui-cell__ft">前端开发工程师</view>
+                        </view>
+                        <view class="nums">80分</view>
+                    </navigator>
+                    <navigator url="" class="weui-cell weui-cell_access">
+                        <image class="weui-cell_img" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg"></image>
+                        <view class="weui-cell_right">
+                            <view class="weui-cell__bd">纪志军</view>
+                            <view class="weui-cell__ft">前端开发工程师</view>
+                        </view>
+                        <view class="nums">80分</view>
+                    </navigator>
+                </view>
+            </view>
+            <view class="list_item {{showflag2 ? 'active' : ''}}">
+                <view class="list_header" bindtap="clickshow2">技术部-产品组（8）<image src="../../images/arrow.png" class="icon_arrow {{showflag2 ? 'icon_active' : ''}}"></image></view>
+                <view class="weui-cells {{showflag2 ? 'active' : ''}}">
+                    <navigator url="" class="weui-cell weui-cell_access">
+                        <image class="weui-cell_img" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg"></image>
+                        <view class="weui-cell_right">
+                            <view class="weui-cell__bd">纪志军</view>
+                            <view class="weui-cell__ft">前端开发工程师</view>
+                        </view>
+                        <view class="nums">80分</view>
+                    </navigator>
+                    <navigator url="" class="weui-cell weui-cell_access">
+                        <image class="weui-cell_img" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg"></image>
+                        <view class="weui-cell_right">
+                            <view class="weui-cell__bd">纪志军</view>
+                            <view class="weui-cell__ft">前端开发工程师</view>
+                        </view>
+                        <view class="nums">80分</view>
+                    </navigator>
+                    <navigator url="" class="weui-cell weui-cell_access">
+                        <image class="weui-cell_img" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg"></image>
+                        <view class="weui-cell_right">
+                            <view class="weui-cell__bd">纪志军</view>
+                            <view class="weui-cell__ft">前端开发工程师</view>
+                        </view>
+                        <view class="nums">80分</view>
+                    </navigator>
+                    <navigator url="" class="weui-cell weui-cell_access">
+                        <image class="weui-cell_img" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg"></image>
+                        <view class="weui-cell_right">
+                            <view class="weui-cell__bd">纪志军</view>
+                            <view class="weui-cell__ft">前端开发工程师</view>
+                        </view>
+                        <view class="nums">80分</view>
+                    </navigator>
+                    <navigator url="" class="weui-cell weui-cell_access">
+                        <image class="weui-cell_img" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg"></image>
+                        <view class="weui-cell_right">
+                            <view class="weui-cell__bd">纪志军</view>
+                            <view class="weui-cell__ft">前端开发工程师</view>
+                        </view>
+                        <view class="nums">80分</view>
+                    </navigator>
+                    <navigator url="" class="weui-cell weui-cell_access">
+                        <image class="weui-cell_img" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg"></image>
+                        <view class="weui-cell_right">
+                            <view class="weui-cell__bd">纪志军</view>
+                            <view class="weui-cell__ft">前端开发工程师</view>
+                        </view>
+                        <view class="nums">80分</view>
+                    </navigator>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,87 @@
+<view class="container">
+  <view class="slide_nav">
+    <view class="slide_nav_con">
+      <view class="nav_item {{ activeflag ? 'active' : ''}}" bindtap="clickactive">加分</view>
+      <view class="nav_item {{ !activeflag ? 'active' : ''}}" bindtap="clickactive">减分</view>
+    </view>
+  </view>
+  <view class="listswrap">
+    <scroll-view class="scroll-view_H" scroll-y="true">
+      <view class="br"></view>
+      <view class="list-item">
+        <view class="list_container">
+          <view class="list_top">
+            <view style="background-image:url(https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg)" class="list_top_img"></view>
+            <view class="list_top_right">
+              <view class="list_top_header">
+                <text class="list_header_name">andy</text>
+                <text class="list_header_time">2017-02-14 15:30</text>
+                <text class="list_header_num">+3</text>
+              </view>
+              <view class="list_top_con">电视剧佛i啊我个我让你估计给人感觉鞥哦i热管那个狗i而个i还能年糕</view>
+              <view class="list_top_works"><text>亲</text><text>赏</text><text>评</text></view>
+            </view>
+          </view>
+          <view class="list_list">
+            <text class="zan"></text>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+          </view>
+          <view class="list_list">
+            <text class="zan"></text>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+          </view>
+          <view class="list_chat">
+            <view class="list_chat_item"><text class="list_chat_user">andy：</text>是的丰厚哇额哈佛我过会我</view>
+            <view class="list_chat_item"><text class="list_chat_user">andy</text>回复<text class="list_chat_user_two">tom：</text>是的丰厚哇额哈佛我过会我</view>
+          </view>
+        </view>
+      </view>
+      <view class="list-item">
+        <view class="list_container">
+          <view class="list_top">
+            <view style="background-image:url(https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg)" class="list_top_img"></view>
+            <view class="list_top_right">
+              <view class="list_top_header">
+                <text class="list_header_name">andy</text>
+                <text class="list_header_time">2017-02-14 15:30</text>
+                <text class="list_header_num">+3</text>
+              </view>
+              <view class="list_top_con">电视剧佛i啊我个我让你估计给人感觉鞥哦i热管那个狗i而个i还能年糕</view>
+              <view class="list_top_works"><text>亲</text><text>赏</text><text>评</text></view>
+            </view>
+          </view>
+          <view class="list_list">
+            <text class="zan"></text>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+          </view>
+          <view class="list_list">
+            <text class="zan"></text>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="list_list_pro"></image>
+          </view>
+          <view class="list_chat">
+            <view class="list_chat_item"><text class="list_chat_user">andy：</text>是的丰厚哇额哈佛我过会我</view>
+            <view class="list_chat_item"><text class="list_chat_user">andy</text>回复<text class="list_chat_user_two">tom：</text>是的丰厚哇额哈佛我过会我</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

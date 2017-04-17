@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="listWrap">
+    <view class="list-item">
+      <view class="icon_img_add icon_img"><view class="iconfont icon-icon1"></view></view>
+      <view class="add_num_title">加分榜</view>
+      <view class="list_con">
+        <view class="con_top">
+          <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="top_img"></image>
+          <view class="top_right">
+            <text class="right_tit">纪志军</text>
+            <view class="right_item"><text>分数</text>88分</view>
+            <view class="right_item"><text>职位</text>前端开发工程师</view>
+          </view>
+        </view>
+        <view class="con_bot"><text class="iconfont icon-xianhua"></text>献花（35）</view>
+      </view>
+    </view>
+    <view class="list-item list-lose">
+      <view class="icon_img_down icon_img"><view class="iconfont icon-kulian"></view></view>
+      <view class="add_num_title">扣分榜</view>
+      <view class="list_con">
+        <view class="con_top">
+          <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="top_img"></image>
+          <view class="top_right">
+            <text class="right_tit">纪志军</text>
+            <view class="right_item"><text>分数</text>88分</view>
+            <view class="right_item"><text>职位</text>前端开发工程师</view>
+          </view>
+        </view>
+        <view class="con_bot"><text class="iconfont icon-hug"></text>抱抱（35）</view>
+      </view>
+    </view>
+  </view>
+</view>

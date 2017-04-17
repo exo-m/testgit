@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="img_bg"></view>
+  <view class="myContainer {{scrollFlag ? 'active' : ''}}">
+    <view class="user_wrap">
+      <view class="user_con">
+        <view class="user_name">Andy</view>
+        <view class="user_pro">UI设计师</view>
+        <view class="user_num">18分</view>
+      </view>
+      <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg" class="user_img {{scrollFlag ? 'active' : ''}}"></image>
+    </view>
+    <!--<view class="listswrap">-->
+      <scroll-view class="scroll-view" scroll-y="true" bindscroll="scrollHandler">
+        <view class="br"></view>
+        <view class="list-item">
+          <view class="list_top">
+            算你狠盛大富翁上年度服务额外你覅我发我发你哦我你我给你了你给我如果你哦完工王工你你无法你手动复位法你
+          </view>
+          <view class="list_bot">
+            <view class="list_time">2017-02-14 20:45</view>
+            <view class="list_num">+3</view>
+          </view>
+        </view>
+        <view class="list-item">
+          <view class="list_top">
+            算你狠盛大富翁上年度服务额外你覅我发我发你哦我你我给你了你给我如果你哦完工王工你你无法你手动复位法你
+          </view>
+          <view class="list_bot">
+            <view class="list_time">2017-02-14 20:45</view>
+            <view class="list_num list_num_down">-3</view>
+          </view>
+        </view>
+        <view class="list-item">
+          <view class="list_top">
+            算你狠盛大富翁上年度服务额外你覅我发我发你哦我你我给你了你给我如果你哦完工王工你你无法你手动复位法你
+          </view>
+          <view class="list_bot">
+            <view class="list_time">2017-02-14 20:45</view>
+            <view class="list_num">+3</view>
+          </view>
+        </view>
+        <view class="list-item">
+          <view class="list_top">
+            算你狠盛大富翁上年度服务额外你覅我发我发你哦我你我给你了你给我如果你哦完工王工你你无法你手动复位法你
+          </view>
+          <view class="list_bot">
+            <view class="list_time">2017-02-14 20:45</view>
+            <view class="list_num">+3</view>
+          </view>
+        </view>
+      </scroll-view>
+    <!--</view>-->
+  </view>
+</view>

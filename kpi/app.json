@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/onlooker/index",
+    "pages/contact/index",
+    "pages/my/index",
+    "pages/login/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#01C88D",
+    "navigationBarTitleText": "头条",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "头条"
+    },{
+      "pagePath": "pages/onlooker/index",
+      "text": "围观"
+    },{
+      "pagePath": "pages/contact/index",
+      "text": "联系人"
+    },{
+      "pagePath": "pages/my/index",
+      "text": "我的"
+    }]
+  }
+}

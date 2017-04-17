@@ -1,0 +1,153 @@
+.container {
+  bacbackground-color: #EEEEEE !important;
+}
+.slide_nav {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+.slide_nav_con {
+  width: 140px;
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  margin: 13px auto 0;
+  display: -webkit-flex;
+  display: flex;
+  align-content: center;
+  overflow: hidden;
+}
+.nav_item {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+  flex-grow: 1;
+}
+.nav_item.active {
+  color: #fff;
+  background-color: #02C98E;
+}
+.listswrap {
+  display: block;
+  width: 100%;
+  height: -webkit-calc(100vh - 61px);
+  height: calc(100vh - 61px);
+  overflow: hidden;
+  background-color: #eee;
+}
+.scroll-view_H {
+  height: 100%;
+  width: 100%;
+}
+.list_container {
+  width: 90%;
+  margin: 0 auto 10px;
+}
+.list-item {
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.list_top {
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.list_top_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 10px;
+  background-position: center;
+  background-size: cover;
+  float: left;
+}
+.list_top_right {
+  width: calc(100% - 60px);
+  float: left;
+  padding-top: 10px;
+}
+.list_top_header {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  color: #333;
+}
+.list_header_name {
+  font-weight: 500;
+  font-size: 22px;
+  margin-right: 10px;
+}
+.list_header_time {
+  font-size: 14px;
+  color: #999999;
+}
+.list_header_num {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  line-height: 30px;
+  font-size: 22px;
+  color: #02C98D;
+  font-weight: 600;
+}
+.list_top_con {
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 15px auto;
+}
+.list_top_works {
+  color: #02C98D;
+  font-size: 18px;
+}
+.list_top_works {
+  color: #01C88D;
+}
+.list_top_works text {
+  margin-right: 20px;
+}
+.list_list {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+.zan {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  margin-top: 15px;
+  border: 1px solid red;
+}
+.list_list_pro {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.list_chat {
+  margin-top: 10px;
+  width: 100%;
+}
+.list_chat_item {
+  width: 100%;
+  color: #333;
+  font-size: 16px;
+}
+.list_chat_user, .list_chat_user_two {
+  color: #0DA3E2;
+  margin-right: 2px;
+}
+.list_chat_user_two {
+  margin-left: 4px;
+}
