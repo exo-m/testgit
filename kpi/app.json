@@ -1,10 +1,10 @@
 {
   "pages":[
-    "pages/details/index",
     "pages/login/index",
     "pages/index/index",
     "pages/onlooker/index",
     "pages/contact/index",
+    "pages/details/index",
     "pages/my/index"
     
   ],

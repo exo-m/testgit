@@ -6,34 +6,40 @@ Page({
     selectType: true,
     selectNumber: true,
     actionSheetHidden: true,
+    activeflag: false,
+    textflag: false,
     types_title: "选择记分类别",
-    num_title: "选择分数"
-
+    num_title: "选择分数",
+    textareacon: ""
   },
  //点击选择记分类型
  clickTypes:function(){ 
     this.setData({
         selectType: !this.data.selectType,
-        selectNumber: true
+        selectNumber: true,
+        textflag: true
     });
  },
  mySelecttype:function(e){
   this.setData({
    types_title: e.target.dataset.me,
-   selectType:true
+   selectType:true,
+   textflag: false
   })
  },
  //点击选择分数
  clickNumber:function(){
     this.setData({
         selectNumber: !this.data.selectNumber,
-        selectType: true
+        selectType: true,
+        textflag: true
     });
  },
  mySelectnum:function(e){
   this.setData({
    num_title: e.target.dataset.me,
-   selectNumber: true
+   selectNumber: true,
+   textflag: false
   })
  },
   onLoad: function () {
@@ -58,13 +64,37 @@ Page({
   reword: function() {
     console.log(12)
     this.setData({
-      actionSheetHidden: !this.data.actionSheetHidden
+      actionSheetHidden: !this.data.actionSheetHidden,
+      activeflag: true
     })
   },
-  actionSheetChange: function(e) {
+  actionSheethid: function(e) {
     this.setData({
-    actionSheetHidden: !this.data.actionSheetHidden
+      actionSheetHidden: !this.data.actionSheetHidden,
+      activeflag: false
     });
-    console.log("点击ation-sheet-cancel，会触发action-sheet绑定的事件。在这里可以通过改变hidden控制菜单的隐藏");
+  },
+  actionSheethid1: function(e) {
+    this.setData({
+      actionSheetHidden: false
+    });
+  },
+  confirm: function() {
+    this.setData({
+      actionSheetHidden: true,
+      activeflag: false
+    });
+  },
+  remain: function() {
+    this.setData({
+      types_title: "选择记分类别",
+      num_title: "选择分数",
+      textareacon: ""
+    });
+  },
+  inputtext: function(e) {
+    this.setData({
+      textareacon: e.target.value
+    })
   }
 })

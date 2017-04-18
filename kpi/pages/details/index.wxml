@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container {{activeflag ? 'active' : ''}}">
   <view class="img_bg"></view>
   <view class="myContainer {{scrollFlag ? 'active' : ''}}">
     <view class="user_wrap">
@@ -119,21 +119,25 @@
       </scroll-view>
     <!--</view>-->
   </view>
-  <view hidden="{{actionSheetHidden}}" bindtap="actionSheethid" class="actionSheet_con">
+</view>
+<view hidden="{{actionSheetHidden}}" bindtap="actionSheethid" class="actionSheet_con">
+  <view class="action_content"  catchtap="actionSheethid1">
     <view class="shite_item paddingtop">
-        <view class="phone_one" bindtap="clickTypes">
-            <view class="phone_personal">{{types_title}}</view>
-        </view>
-        <view class="person_box" hidden="{{selectType}}">
-            <view class="select_one" bindtap="mySelecttype" data-me="A类Bug">A类Bug</view>
-            <view class="select_one" bindtap="mySelecttype" data-me="B类Bug">B类Bug</view>
-            <view class="select_one" bindtap="mySelecttype" data-me="C类Bug">C类Bug</view>
-            <view class="select_one" bindtap="mySelecttype" data-me="其他">其他</view>
-        </view>
+      <view class="phone_one" bindtap="clickTypes">
+          <view class="phone_personal">{{types_title}}</view>
+          <view class="rowser"></view>
+      </view>
+      <view class="person_box" hidden="{{selectType}}">
+          <view class="select_one" bindtap="mySelecttype" data-me="A类Bug">A类Bug</view>
+          <view class="select_one" bindtap="mySelecttype" data-me="B类Bug">B类Bug</view>
+          <view class="select_one" bindtap="mySelecttype" data-me="C类Bug">C类Bug</view>
+          <view class="select_one" bindtap="mySelecttype" data-me="其他">其他</view>
+      </view>
     </view>
     <view class="shite_item">
         <view class="phone_one" bindtap="clickNumber">
             <view class="phone_personal">{{num_title}}</view>
+            <view class="rowser"></view>
         </view>
         <view class="person_box" hidden="{{selectNumber}}">
             <view class="select_one" bindtap="mySelectnum" data-me="6分">6分</view>
@@ -143,11 +147,11 @@
         </view>
     </view>
     <view class="shite_item shite_area">
-        <textarea class="text-area" cursor-spacing="100" placeholder="说明：" />
+        <textarea hidden="{{textflag}}" bindinput="inputtext" class="text-area" fixed="true" value="{{textareacon}}" cursor-spacing="100" placeholder="说明：" />
     </view>
     <view class="shite_item doworks">
-        <view class="confirm">确认</view>
-        <view class="remain">重置</view>
+        <view class="confirm" catchtap="confirm">确认</view>
+        <view class="remain" catchtap="remain">重置</view>
     </view>
-</view>
+  </view>
 </view>

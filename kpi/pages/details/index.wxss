@@ -1,6 +1,10 @@
 .container {
     background-color: #fff;
 }
+.container.active {
+    height: 100%;
+    overflow: hidden;
+}
 .img_bg {
     width: 100%;
     background-image: url("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1814344572,2456924488&fm=23&gp=0.jpg");
@@ -147,6 +151,17 @@
   border: 1px solid #DFDFDF;
   color: #B5B5B5;
 }
+.rowser {
+    width:0;
+    height:0;
+    border-width:10px;
+    border-style:solid dashed dashed dashed;
+    border-color:#CCCCCC transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    right: 20px;
+}
 .person_box{
   position: absolute;
   top: 52px;
@@ -155,7 +170,7 @@
   background-color: #fff;
   z-index: 10000;
   overflow: auto;
-  height: 153px;
+  height: 204px;
 }
 .select_one{
   text-align: center;
@@ -180,20 +195,15 @@
 }
 .shite_area {
     height: 100px;
-    position: relative;
-    width: 90%;
 }
 .text-area {
-    position: absolute;
-    top: 0px;
-    left: 0;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     height: 100px;
-    border: 1px solid #DFDFDF;
     border-radius: 10rpx;
     color: #333;
+    border: 1px solid #DFDFDF;
     padding-left: 10px;
-    z-index: 100;
     padding-top: 6px;
 }
 .doworks {
@@ -225,6 +235,13 @@
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100px;
+    height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-end;
+}
+.action_content {
+    width: 100%;
+    background: #fff;
 }
