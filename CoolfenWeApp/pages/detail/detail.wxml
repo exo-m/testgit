@@ -1,0 +1,251 @@
+<view class="page-container">
+    <view class="header">
+        <view style="width: 30rpx"></view>
+        <image class="header-img" mode="aspectFill" src="{{Merchant.ImageUrl}}" binderror="imageErrorHandler"></image>
+        <view style="width: 30rpx"></view>
+        <view class="header-description-container font-24">
+            <view class="desrciption-lable">
+                <view class="desrciption-icon iconfont icon-weizhi"></view>
+                <view class="desrciption-space"></view>
+                <view>{{Merchant.Address}}</view>
+            </view>
+            <view class="desrciption-lable">
+                <view class="desrciption-icon iconfont icon-dianhua"></view>
+                <view class="desrciption-space"></view>
+                <view>{{Merchant.Telephone}}</view>
+            </view>
+            <view class="desrciption-lable">
+                <view class="desrciption-icon iconfont icon-shijian"></view>
+                <view class="desrciption-space"></view>
+                <view>营业时间：9:00 - 22:00</view>
+            </view>
+            <view class="desrciption-lable">
+                <view class="desrciption-icon iconfont icon-wode"></view>
+                <view class="desrciption-space"></view>
+                <view class="desrciption-money">
+                    <view class="inline-block">人均</view>
+                    <view class="inline-block" style="width: 14rpx;"></view>
+                    <view class="font-18 inline-block">¥</view>
+                    <view class="inline-block" style="width: 4rpx;"></view>
+                    <view class="inline-block">{{Merchant.Avg}}/人</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="title-container" bindtap="goRule">
+        <view class="title-space"></view>
+        <view class="title-text-container title-color1">
+            <view class="iconfont icon-wodezichan font-36"></view>
+            <view class="title-text-space"></view>
+            <view class="font-28">我的资产</view>
+            <view style="flex: 1"></view>
+            <view class="font-26 title-color3 iconfont icon-guize"></view>
+            <view style="width: 10rpx"></view>
+            <view class="font-24 title-color3">使用规则</view>
+            <view style="width: 50rpx"></view>
+        </view>
+    </view>
+
+    <view class="assets-container">
+        <view class="assets-left"></view>
+        <view class="assets-right">
+            <view class="assets-top">
+                <view class="font-28" style="font-weight: bolder">可用积分</view>
+                <view style="flex: 1"></view>
+                <view class="assets-poiont">
+                    <view class="font-34 inline-block" style="font-weight: bold">{{Points}}</view>
+                    <view class="inline-block" style="width: 16rpx;"></view>
+                    <view class="inline-block font-24">积分</view>
+                </view>
+                <view style="width: 50rpx;"></view>
+            </view>
+            <view class="assets-bottom">
+                <view style="flex: 1"></view>
+                <view class="font-24 font-gray">可用优惠券 {{Tickets.length}}张</view>
+                <view style="height: 20rpx;"></view>
+                <scroll-view wx:if="{{Tickets.length>0}}" scroll-x="true" class="assets-ticket-scroll">
+                    <view wx:for="{{Tickets}}" class="inline-block">
+                        <view class="assets-ticket background-img {{item.imgClass}}">
+                            <view class="assets-ticket-content">
+                                <view class="assets-ticket-left">
+                                    <view>
+                                        <view class="font-20 inline-block">¥</view>
+                                        <view class="inline-block" style="width: 6rpx;"></view>
+                                        <view class="font-32 inline-block">{{item.Money}}</view>
+                                    </view>
+                                </view>
+                                <view class="assets-ticket-right font-20">
+                                    <view style="flex: 1"></view>
+                                    <view>满{{item.MinimumMoney}}元可用</view>
+                                    <view style="height: 15rpx;"></view>
+                                    <view>至 {{item.ExpireDate}}</view>
+                                    <view style="flex: 1"></view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+
+                    <!--<view class="assets-ticket vouchers-small background-img">-->
+                        <!--<view class="assets-ticket-content">-->
+                            <!--<view class="assets-ticket-left">-->
+                                <!--<view>-->
+                                    <!--<view class="font-20 inline-block">¥</view>-->
+                                    <!--<view class="inline-block" style="width: 6rpx;"></view>-->
+                                    <!--<view class="font-32 inline-block">2</view>-->
+                                <!--</view>-->
+                            <!--</view>-->
+                            <!--<view class="assets-ticket-right font-20">-->
+                                <!--<view style="flex: 1"></view>-->
+                                <!--<view>满0.01元可用</view>-->
+                                <!--<view style="height: 15rpx;"></view>-->
+                                <!--<view>至 2017-01-20</view>-->
+                                <!--<view style="flex: 1"></view>-->
+                            <!--</view>-->
+                        <!--</view>-->
+                    <!--</view>-->
+
+                    <!--<view class="assets-ticket cash-coupons-small background-img">-->
+                        <!--<view class="assets-ticket-content">-->
+                            <!--<view class="assets-ticket-left">-->
+                                <!--<view>-->
+                                    <!--<view class="font-20 inline-block">¥</view>-->
+                                    <!--<view class="inline-block" style="width: 6rpx;"></view>-->
+                                    <!--<view class="font-32 inline-block">2</view>-->
+                                <!--</view>-->
+                            <!--</view>-->
+                            <!--<view class="assets-ticket-right font-20">-->
+                                <!--<view style="flex: 1"></view>-->
+                                <!--<view>满0.01元可用</view>-->
+                                <!--<view style="height: 15rpx;"></view>-->
+                                <!--<view>至 2017-01-20</view>-->
+                                <!--<view style="flex: 1"></view>-->
+                            <!--</view>-->
+                        <!--</view>-->
+                    <!--</view>-->
+
+                    <!--<view class="assets-ticket red-envelopes-small background-img">-->
+                        <!--<view class="assets-ticket-content">-->
+                            <!--<view class="assets-ticket-left">-->
+                                <!--<view>-->
+                                    <!--<view class="font-20 inline-block">¥</view>-->
+                                    <!--<view class="inline-block" style="width: 6rpx;"></view>-->
+                                    <!--<view class="font-32 inline-block">2</view>-->
+                                <!--</view>-->
+                            <!--</view>-->
+                            <!--<view class="assets-ticket-right font-20">-->
+                                <!--<view style="flex: 1"></view>-->
+                                <!--<view>满0.01元可用</view>-->
+                                <!--<view style="height: 15rpx;"></view>-->
+                                <!--<view>至 2017-01-20</view>-->
+                                <!--<view style="flex: 1"></view>-->
+                            <!--</view>-->
+                        <!--</view>-->
+                    <!--</view>-->
+
+                </scroll-view>
+                <view wx:else class="no-coupon-container">
+                    <view class="assets-ticket background-img no-coupon"></view>
+                </view>
+                <view style="flex: 1"></view>
+            </view>
+        </view>
+    </view>
+
+    <block wx:if="{{MoreMerchants.length>0}}">
+
+    <view class="title-container">
+        <view class="title-space"></view>
+        <view class="title-text-container title-color2">
+            <view class="iconfont icon-youhui font-36"></view>
+            <view class="title-text-space"></view>
+            <view class="font-28">更多优惠</view>
+        </view>
+    </view>
+
+    <view class="more-ticket-container">
+        <view wx:for="{{MoreMerchants}}">
+            <view class="more-ticket-content">
+                <view style="width: 30rpx;"></view>
+                <view class="more-ticket background-img {{item.imgClass}}">
+                    <view class="more-ticket-left">
+                        <view style="font-weight: bolder">
+                            <view class="inline-block font-20">¥</view>
+                            <view class="inline-block" style="width: 6rpx;"></view>
+                            <view class="inline-block font-38">{{item.Money}}</view>
+                        </view>
+                    </view>
+                    <view class="more-ticket-right">
+                        <view style="flex: 1"></view>
+                        <view class="font-26" style="font-weight: bolder">{{item.MerchantName}}</view>
+                        <view style="height: 20rpx;"></view>
+                        <view class="font-24">满{{item.MinimumMoney}}元可用</view>
+                        <view style="height: 16rpx;"></view>
+                        <view class="font-24">有效期至 {{item.ExpireDate}}</view>
+                        <view style="flex: 1"></view>
+                    </view>
+                </view>
+                <view class="receive-btn-container">
+                    <view class="already-receive-btn font-26" wx:if="{{item.received}}">已领取</view>
+                    <view class="receive-btn font-26" data-index="{{index}}" bindtap="receive" wx:else>立即领取</view>
+                </view>
+            </view>
+        </view>
+
+        <!--<view class="more-ticket-content">-->
+            <!--<view style="width: 30rpx;"></view>-->
+            <!--<view class="more-ticket vouchers-big background-img">-->
+                <!--<view class="more-ticket-left">-->
+                    <!--<view style="font-weight: bolder">-->
+                        <!--<view class="inline-block font-20">¥</view>-->
+                        <!--<view class="inline-block" style="width: 6rpx;"></view>-->
+                        <!--<view class="inline-block font-38">5</view>-->
+                    <!--</view>-->
+                <!--</view>-->
+                <!--<view class="more-ticket-right">-->
+                    <!--<view style="flex: 1"></view>-->
+                    <!--<view class="font-26" style="font-weight: bolder">杨国福麻辣烫(傅家坡店)</view>-->
+                    <!--<view style="height: 20rpx;"></view>-->
+                    <!--<view class="font-24">满3元可用</view>-->
+                    <!--<view style="height: 16rpx;"></view>-->
+                    <!--<view class="font-24">有效期至 2017-01-20</view>-->
+                    <!--<view style="flex: 1"></view>-->
+                <!--</view>-->
+            <!--</view>-->
+            <!--<view class="receive-btn-container">-->
+                <!--<view class="receive-btn font-26">立即领取</view>-->
+            <!--</view>-->
+        <!--</view>-->
+
+        <!--<view class="more-ticket-content">-->
+            <!--<view style="width: 30rpx;"></view>-->
+            <!--<view class="more-ticket cash-coupons-big background-img">-->
+                <!--<view class="more-ticket-left">-->
+                    <!--<view style="font-weight: bolder">-->
+                        <!--<view class="inline-block font-20">¥</view>-->
+                        <!--<view class="inline-block" style="width: 6rpx;"></view>-->
+                        <!--<view class="inline-block font-38">5</view>-->
+                    <!--</view>-->
+                <!--</view>-->
+                <!--<view class="more-ticket-right">-->
+                    <!--<view style="flex: 1"></view>-->
+                    <!--<view class="font-26" style="font-weight: bolder">杨国福麻辣烫(傅家坡店)</view>-->
+                    <!--<view style="height: 20rpx;"></view>-->
+                    <!--<view class="font-24">满3元可用</view>-->
+                    <!--<view style="height: 16rpx;"></view>-->
+                    <!--<view class="font-24">有效期至 2017-01-20</view>-->
+                    <!--<view style="flex: 1"></view>-->
+                <!--</view>-->
+            <!--</view>-->
+            <!--<view class="receive-btn-container">-->
+                <!--<view class="receive-btn font-26">立即领取</view>-->
+            <!--</view>-->
+        <!--</view>-->
+
+    </view>
+
+    </block>
+
+    <view class="rule">* 使用微信/支付宝付款时，满足条件自动抵扣积分/优惠券</view>
+    <view style="height: 150rpx;"></view>
+</view>

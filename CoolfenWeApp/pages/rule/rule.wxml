@@ -1,0 +1,42 @@
+<view class="body-container">
+    <view class="body-left"></view>
+    <view class="body-right">
+        <view class="rule">
+            <view class="rule-top">积分</view>
+            <view class="rule-bottom">
+                <view class="space-lg"></view>
+                <view>使用规则:</view>
+                <view class="space-mid"></view>
+                <view>a.1积分=1元，可在下次付款时，满足条件自动抵扣现金。</view>
+            </view>
+        </view>
+
+        <view class="rule">
+            <view class="rule-top">优惠券</view>
+            <view class="rule-bottom">
+                <view class="space-lg"></view>
+                <view>使用规则:</view>
+                <view class="space-mid"></view>
+                <view>a.优惠券请在指定商户支付使用，每次可使用1张;</view>
+                <view class="space-sm"></view>
+                <view>b.优惠券付款时满足条件会自动使用，不兑换、不找零;</view>
+                <view class="space-sm"></view>
+                <view>c.优惠券需在有效期内使用，过期作废。</view>
+            </view>
+        </view>
+
+        <view class="rule">
+            <view class="rule-top">储值卡</view>
+            <view class="rule-bottom">
+                <view class="space-lg"></view>
+                <view>使用规则:</view>
+                <view class="space-mid"></view>
+                <view>a.储值卡请在指定商户使用，可循环充值;</view>
+                <view class="space-sm"></view>
+                <view>b.储值卡已与ID绑定，仅限本人使用，不能转让;</view>
+                <view class="space-sm"></view>
+                <view>c.储值卡已享受会员待遇，不与其他优惠同时使用。</view>
+            </view>
+        </view>
+    </view>
+</view>

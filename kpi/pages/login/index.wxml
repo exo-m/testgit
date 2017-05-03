@@ -7,11 +7,11 @@
     <view class="loginCon">
         <view class="section">
           <view class="section_icon iconfont icon-dengluyonghu"></view>
-          <input name="name" placeholder="请输入姓名" />
+          <input name="name" type="text" placeholder="请输入姓名" value="{{name_user}}" bindinput="EventHandle1" />
         </view>
         <view class="section">
           <view class="section_icon iconfont icon-password"></view>
-          <input name="password" placeholder="请输入密码" />
+          <input name="password" type="password" value="{{pass_user}}" placeholder="请输入密码" bindinput="EventHandle2" />
         </view>
         <view class="section_gap">
           <label><checkbox value="0"/>记住密码</label>
@@ -20,5 +20,6 @@
         <view class="btn-area" bindtap="bindSubmit">登录</view>
     </view>
   </view>
+  <view class="warning {{warningflag ? '' : 'active'}}">用户名或者密码错误！</view>
   <image src="../../images/bg.jpg" class="bg_img"></image>
 </view>

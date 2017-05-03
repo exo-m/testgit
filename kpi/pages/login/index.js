@@ -2,14 +2,38 @@ var app = getApp()
 Page({
   data: {
     motto: 'Hello World',
-    userInfo: {}
+    userInfo: {},
+    name_user: "",
+    pass_user: "",
+    warningflag: true
   },
   //事件处理函数
   bindSubmit: function() {
-    console.log(12)
+    let that = this;
+    if(this.data.pass_user == "123456" && this.data.name_user == "andy") {
+       wx.switchTab({
+        url: '../index/index'
+      });
+    }else {
+      this.setData({
+        warningflag: false
+      });
+      setTimeout(function(){
+        that.setData({
+          warningflag: true
+        })
+      },1000);
+    }
     // wx.navigateBack();
-    wx.switchTab({
-      url: '../index/index'
+  },
+  EventHandle1: function(e) {
+    this.setData({
+      name_user: e.detail.value
+    })
+  },
+  EventHandle2: function(e) {
+    this.setData({
+      pass_user: e.detail.value
     })
   },
   onLoad: function () {

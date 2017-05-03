@@ -1,0 +1,41 @@
+.body-container {
+    display: flex;
+}
+
+.body-left {
+    width: 50rpx;
+}
+
+.body-right {
+    flex: 1;
+}
+
+.rule {
+    width: 100%;
+    margin-top: 60rpx;
+    margin-bottom: 30rpx;
+}
+
+.rule-top {
+    height: 49rpx;
+    font-size: 30rpx;
+    font-weight: bolder;
+    border-bottom: 1rpx solid #cbcbcb;
+}
+
+.rule-bottom {
+    color: #666666;
+    font-size: 26rpx;
+}
+
+.space-lg {
+    height: 30rpx;
+}
+
+.space-mid {
+    height: 26rpx;
+}
+
+.space-sm {
+    height: 18rpx;
+}

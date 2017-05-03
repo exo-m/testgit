@@ -1,0 +1,390 @@
+<view class="page-container">
+
+    <view class="header">
+        <view class="header-left"></view>
+        <view class="header-right">
+            <view class="header-top">
+                <view class="header-sapce"></view>
+                <view class="header-top-content">
+                    <view class="font-24 font-gray">扫码支付共节省</view>
+                    <view class="header-money">
+                        <view class="font-30 inline-block">¥</view>
+                        <view class="inline-block" style="width: 24rpx;"></view>
+                        <view class="font-60 inline-block">{{TotalSave}}</view>
+                    </view>
+                </view>
+                <view class="header-sapce"></view>
+            </view>
+            <view class="header-bottom">
+                <view class="header-bottom-money">
+                    <view class="font-24 font-gray">消费笔数</view>
+                    <view class="header-bottom-money-row-space"></view>
+                    <view class="header-money">
+                        <view class="font-36 inline-block">{{Times}}</view>
+                        <view class="inline-block header-bottom-money-col-space"></view>
+                        <view class="font-22 inline-block">笔</view>
+                    </view>
+                </view>
+                <view class="header-bottom-money">
+                    <view class="font-24 font-gray">积分抵现</view>
+                    <view class="header-bottom-money-row-space"></view>
+                    <view class="header-money">
+                        <view class="font-20 inline-block">¥</view>
+                        <view class="inline-block header-bottom-money-col-space"></view>
+                        <view class="font-36 inline-block">{{UsePoints}}</view>
+                    </view>
+                </view>
+                <view class="header-bottom-money">
+                    <view class="font-24 font-gray">券类优惠</view>
+                    <view class="header-bottom-money-row-space"></view>
+                    <view class="header-money">
+                        <view class="font-20 inline-block">¥</view>
+                        <view class="inline-block header-bottom-money-col-space"></view>
+                        <view class="font-36 inline-block">{{UseCoupons}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="title-container">
+        <view class="title-space"></view>
+        <view class="title-text-container title-color1">
+            <view class="iconfont icon-wodezichan font-36"></view>
+            <view class="title-text-space"></view>
+            <view class="font-28">我的资产</view>
+        </view>
+    </view>
+
+    <view class="ticket-container">
+        <view class="ticket-top-container">
+            <view class="ticket-top">
+                <view class="ticket-top-left">
+                    <view class="test" style="width: 50rpx"></view>
+                    <view class="font-60" style="height: 60rpx;line-height: 60rpx">{{Points}}</view>
+                    <view class="test" style="width: 20rpx"></view>
+                    <view class="font-24">积分</view>
+                </view>
+                <view class="ticket-top-right">
+                    <view style="width: 30rpx;"></view>
+                    <view class="font-24 font-gray">积分当钱花</view>
+                    <view style="width: 20rpx;"></view>
+                    <view class="font-24 font-gray">1积分=1元</view>
+                </view>
+            </view>
+        </view>
+
+        <view style="height: 60rpx"></view>
+        <view class="font-24 font-gray" style="margin-left: 30rpx">优惠券{{Tickets.length}}张</view>
+        <view style="height: 12rpx"></view>
+
+        <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex;width: 100%;">
+            <view class="inline-block" style="width: 20rpx"></view>
+
+            <view wx:for="{{Tickets}}" class="inline-block">
+                <view class="ticket-item background-img {{item.imgClass}}">
+                    <view class="ticket-text">
+                        <view class="ticket-text-top">
+                            <view class="font-20 inline-block">¥</view>
+                            <view class="ticket-text-sapce inline-block"></view>
+                            <view class="font-34 inline-block">{{item.Money}}</view>
+                        </view>
+                        <view class="ticket-text-bottom">
+                            {{item.Merchant}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+            <!--<view class="ticket-item background-img vouchers">-->
+            <!--<view class="ticket-text">-->
+            <!--<view class="ticket-text-top">-->
+            <!--<view class="font-20 inline-block">¥</view>-->
+            <!--<view class="ticket-text-sapce inline-block"></view>-->
+            <!--<view class="font-34 inline-block">10</view>-->
+            <!--</view>-->
+            <!--<view class="ticket-text-bottom">-->
+            <!--随缘小厨-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--<view class="ticket-item background-img cash-coupons">-->
+            <!--<view class="ticket-text">-->
+            <!--<view class="ticket-text-top">-->
+            <!--<view class="font-20 inline-block">¥</view>-->
+            <!--<view class="ticket-text-sapce inline-block"></view>-->
+            <!--<view class="font-34 inline-block">18</view>-->
+            <!--</view>-->
+            <!--<view class="ticket-text-bottom">-->
+            <!--我爱鱼头-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--<view class="ticket-item background-img red-envelopes">-->
+            <!--<view class="ticket-text">-->
+            <!--<view class="ticket-text-top">-->
+            <!--<view class="font-20 inline-block">¥</view>-->
+            <!--<view class="ticket-text-sapce inline-block"></view>-->
+            <!--<view class="font-34 inline-block">2</view>-->
+            <!--</view>-->
+            <!--<view class="ticket-text-bottom">-->
+            <!--菊寿司-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--<view class="ticket-item background-img discount-coupons">-->
+            <!--<view class="ticket-text">-->
+            <!--<view class="ticket-text-top">-->
+            <!--<view class="font-34 inline-block">8</view>-->
+            <!--<view class="ticket-text-sapce inline-block"></view>-->
+            <!--<view class="font-20 inline-block">折</view>-->
+            <!--</view>-->
+            <!--<view class="ticket-text-bottom">-->
+            <!--龙门花甲-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--<view class="ticket-item background-img vouchers">-->
+            <!--<view class="ticket-text">-->
+            <!--<view class="ticket-text-top">-->
+            <!--<view class="font-20 inline-block">¥</view>-->
+            <!--<view class="ticket-text-sapce inline-block"></view>-->
+            <!--<view class="font-34 inline-block">10</view>-->
+            <!--</view>-->
+            <!--<view class="ticket-text-bottom">-->
+            <!--酷分-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--<view class="ticket-item background-img cash-coupons">-->
+            <!--<view class="ticket-text">-->
+            <!--<view class="ticket-text-top">-->
+            <!--<view class="font-20 inline-block">¥</view>-->
+            <!--<view class="ticket-text-sapce inline-block"></view>-->
+            <!--<view class="font-34 inline-block">10</view>-->
+            <!--</view>-->
+            <!--<view class="ticket-text-bottom">-->
+            <!--利楚商务-->
+            <!--</view>-->
+            <!--</view>-->
+            <!--</view>-->
+
+            <view class="inline-block" style="width: 20rpx"></view>
+        </scroll-view>
+    </view>
+
+    <view class="title-container">
+        <view class="title-space"></view>
+        <view class="title-text-container title-color2">
+            <view class="iconfont icon-youhui font-36"></view>
+            <view class="title-text-space"></view>
+            <view class="font-28">享受更多优惠</view>
+        </view>
+    </view>
+
+    <view class="merchants-container">
+
+        <view wx:for="{{Merchants}}">
+            <view class="merchant-item-container" data-mid="{{item.ID}}" bindtap="goDetail">
+                <view class="merchant-item-img-container">
+                    <image class="merchant-item-img" mode="aspectFill" src="{{item.ImageUrl}}" data-index="{{index}}"
+                           binderror="imageErrorHandler"></image>
+                </view>
+                <view class="merchant-item-space"></view>
+                <view class="merchant-item-text-container">
+                    <view class="merchant-item-text-space"></view>
+                    <view class="font-28">{{item.Name}}</view>
+                    <view class="merchant-item-text-title-space"></view>
+                    <view class="merchant-item-text-tag-row">
+                        <view class="merchant-item-text-tag">
+                            <view class="font-20 font-pink">{{item.Classification}}</view>
+                        </view>
+                        <view class="merchant-item-text-tag-row-space"></view>
+                        <view>
+                            <view class="font-22 inline-block">人均</view>
+                            <view class="merchant-item-text-price-sapce inline-block"></view>
+                            <view class="font-18 inline-block">¥</view>
+                            <view class="merchant-item-text-price-sapce inline-block"></view>
+                            <view class="font-22 inline-block">{{item.Avg}}/人</view>
+                        </view>
+                    </view>
+                    <view class="merchant-item-text-space"></view>
+                    <view class="merchant-item-text-point" wx:if="{{item.Issue}}">
+                        <view class="merchant-item-text-circle red-circle font-18">积</view>
+                        <view class="merchant-item-text-circle-sapce"></view>
+                        <view class="font-22 font-gray">
+                            满{{item.Issue.Threshold}}元送{{item.Issue.Money}}分，下次满{{item.Redeem.Threshold}}元抵现{{item.Redeem.Money}}分
+                        </view>
+                    </view>
+                    <view class="merchant-item-text-rule-space"></view>
+                    <view class="merchant-item-text-point" wx:if="{{item.TicketsLabel}}">
+                        <view class="merchant-item-text-circle yellow-circle font-18">券</view>
+                        <view class="merchant-item-text-circle-sapce"></view>
+                        <view class="font-22 font-gray">{{item.TicketsLabel}}</view>
+                    </view>
+                    <view class="merchant-item-text-space"></view>
+                </view>
+            </view>
+        </view>
+
+        <!--<view class="merchant-item-container">-->
+        <!--<view class="merchant-item-img-container">-->
+        <!--&lt;!&ndash;<image class="merchant-item-img" src="http://3.pic.pc6.com/thumb/up/2015-11/2015111995145_160_160.jpg"></image>&ndash;&gt;-->
+        <!--<image class="merchant-item-img" mode="aspectFill" src="http://www.coolfen.com/bg/yumitanglanghui.jpg"></image>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-space"></view>-->
+        <!--<view class="merchant-item-text-container">-->
+        <!--<view class="merchant-item-text-space"></view>-->
+        <!--<view class="font-28">半秋山 (中南店)</view>-->
+        <!--<view class="merchant-item-text-title-space"></view>-->
+        <!--<view class="merchant-item-text-tag-row">-->
+        <!--<view class="merchant-item-text-tag">-->
+        <!--<view class="font-20 font-pink">西餐</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-tag-row-space"></view>-->
+        <!--<view>-->
+        <!--<view class="font-22 inline-block">人均</view>-->
+        <!--<view class="merchant-item-text-price-sapce inline-block"></view>-->
+        <!--<view class="font-18 inline-block">¥</view>-->
+        <!--<view class="merchant-item-text-price-sapce inline-block"></view>-->
+        <!--<view class="font-22 inline-block">61/人</view>-->
+        <!--</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-space"></view>-->
+        <!--<view class="merchant-item-text-point">-->
+        <!--<view class="merchant-item-text-circle red-circle font-18">积</view>-->
+        <!--<view class="merchant-item-text-circle-sapce"></view>-->
+        <!--<view class="font-22 font-gray">满10元送1分，下次满10元抵现1分</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-rule-space"></view>-->
+        <!--<view class="merchant-item-text-point">-->
+        <!--<view class="merchant-item-text-circle yellow-circle font-18">券</view>-->
+        <!--<view class="merchant-item-text-circle-sapce"></view>-->
+        <!--<view class="font-22 font-gray">10元代金券 / 20元现金券 / 8折折扣券</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-space"></view>-->
+        <!--</view>-->
+        <!--</view>-->
+
+        <!--<view class="merchant-item-container">-->
+        <!--<view class="merchant-item-img-container">-->
+        <!--&lt;!&ndash;<image class="merchant-item-img" src="http://www.russelllittleauthor.com/wp-content/uploads/2015/12/images.png"></image>&ndash;&gt;-->
+        <!--<image class="merchant-item-img" mode="aspectFill" src="http://www.coolfen.com/bg/shuiguopingjiachaoshihuashidian.jpg"></image>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-space"></view>-->
+        <!--<view class="merchant-item-text-container">-->
+        <!--<view class="merchant-item-text-space"></view>-->
+        <!--<view class="font-28">鲜芋仙 (凯德1818店)</view>-->
+        <!--<view class="merchant-item-text-title-space"></view>-->
+        <!--<view class="merchant-item-text-tag-row">-->
+        <!--<view class="merchant-item-text-tag">-->
+        <!--<view class="font-20 font-pink">饮品/甜品</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-tag-row-space"></view>-->
+        <!--<view>-->
+        <!--<view class="font-22 inline-block">人均</view>-->
+        <!--<view class="merchant-item-text-price-sapce inline-block"></view>-->
+        <!--<view class="font-18 inline-block">¥</view>-->
+        <!--<view class="merchant-item-text-price-sapce inline-block"></view>-->
+        <!--<view class="font-22 inline-block">30/人</view>-->
+        <!--</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-space"></view>-->
+        <!--<view class="merchant-item-text-point">-->
+        <!--<view class="merchant-item-text-circle red-circle font-18">积</view>-->
+        <!--<view class="merchant-item-text-circle-sapce"></view>-->
+        <!--<view class="font-22 font-gray">满10元送1分，下次满8元抵现1分</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-rule-space"></view>-->
+        <!--<view class="merchant-item-text-point">-->
+        <!--<view class="merchant-item-text-circle yellow-circle font-18">券</view>-->
+        <!--<view class="merchant-item-text-circle-sapce"></view>-->
+        <!--<view class="font-22 font-gray">10元代金券 / 9折折扣券 / 2元红包</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-space"></view>-->
+        <!--</view>-->
+        <!--</view>-->
+
+        <!--<view class="merchant-item-container">-->
+        <!--<view class="merchant-item-img-container">-->
+        <!--&lt;!&ndash;<image class="merchant-item-img" src="http://wiki.inkscape.org/wiki/images/Wirelizard_logo_160x160.png"></image>&ndash;&gt;-->
+        <!--<image class="merchant-item-img" mode="aspectFill" src="http://www.coolfen.com/bg/blackwhithcafe.jpg"></image>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-space"></view>-->
+        <!--<view class="merchant-item-text-container">-->
+        <!--<view class="merchant-item-text-space"></view>-->
+        <!--<view class="font-28">COSTA COFFEE (中商广场店)</view>-->
+        <!--<view class="merchant-item-text-title-space"></view>-->
+        <!--<view class="merchant-item-text-tag-row">-->
+        <!--<view class="merchant-item-text-tag">-->
+        <!--<view class="font-20 font-pink">西餐</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-tag-row-space"></view>-->
+        <!--<view>-->
+        <!--<view class="font-22 inline-block">人均</view>-->
+        <!--<view class="merchant-item-text-price-sapce inline-block"></view>-->
+        <!--<view class="font-18 inline-block">¥</view>-->
+        <!--<view class="merchant-item-text-price-sapce inline-block"></view>-->
+        <!--<view class="font-22 inline-block">30/人</view>-->
+        <!--</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-space"></view>-->
+        <!--<view class="merchant-item-text-point">-->
+        <!--<view class="merchant-item-text-circle red-circle font-18">积</view>-->
+        <!--<view class="merchant-item-text-circle-sapce"></view>-->
+        <!--<view class="font-22 font-gray">满10元送1分，下次满10元抵现1分</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-rule-space"></view>-->
+        <!--<view class="merchant-item-text-point">-->
+        <!--<view class="merchant-item-text-circle yellow-circle font-18">券</view>-->
+        <!--<view class="merchant-item-text-circle-sapce"></view>-->
+        <!--<view class="font-22 font-gray">5元代金券 / 15元现金券 / 7折折扣券</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-space"></view>-->
+        <!--</view>-->
+        <!--</view>-->
+
+        <!--<view class="merchant-item-container">-->
+        <!--<view class="merchant-item-img-container">-->
+        <!--&lt;!&ndash;<image class="merchant-item-img" src="http://www.bplusf.com/wordpress/wp-content/uploads/2014/07/Apple-logo-iPhone-6-June-2014-160x160.jpg"></image>&ndash;&gt;-->
+        <!--<image class="merchant-item-img" mode="aspectFill" src="http://www.coolfen.com/bg/sijihuahudadian.jpg"></image>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-space"></view>-->
+        <!--<view class="merchant-item-text-container">-->
+        <!--<view class="merchant-item-text-space"></view>-->
+        <!--<view class="font-28">棒约翰 (新世界百货徐东店)</view>-->
+        <!--<view class="merchant-item-text-title-space"></view>-->
+        <!--<view class="merchant-item-text-tag-row">-->
+        <!--<view class="merchant-item-text-tag">-->
+        <!--<view class="font-20 font-pink">西餐</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-tag-row-space"></view>-->
+        <!--<view>-->
+        <!--<view class="font-22 inline-block">人均</view>-->
+        <!--<view class="merchant-item-text-price-sapce inline-block"></view>-->
+        <!--<view class="font-18 inline-block">¥</view>-->
+        <!--<view class="merchant-item-text-price-sapce inline-block"></view>-->
+        <!--<view class="font-22 inline-block">61/人</view>-->
+        <!--</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-space"></view>-->
+        <!--<view class="merchant-item-text-point">-->
+        <!--<view class="merchant-item-text-circle red-circle font-18">积</view>-->
+        <!--<view class="merchant-item-text-circle-sapce"></view>-->
+        <!--<view class="font-22 font-gray">满10元送1分，下次满10元抵现1分</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-rule-space"></view>-->
+        <!--<view class="merchant-item-text-point">-->
+        <!--<view class="merchant-item-text-circle yellow-circle font-18">券</view>-->
+        <!--<view class="merchant-item-text-circle-sapce"></view>-->
+        <!--<view class="font-22 font-gray">10元代金券 / 20元现金券 / 8折折扣券</view>-->
+        <!--</view>-->
+        <!--<view class="merchant-item-text-space"></view>-->
+        <!--</view>-->
+        <!--</view>-->
+    </view>
+
+    <view class="loadmore" hidden="{{!hasMore}}" bindtap="loadMore">加载更多</view>
+
+    <view style="height: 50rpx"></view>
+</view>

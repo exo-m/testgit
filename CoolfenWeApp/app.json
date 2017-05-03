@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/rule/rule"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f77a2d",
+    "navigationBarTitleText": "酷分",
+    "navigationBarTextStyle":"white",
+    "backgroundColor":"#f3f3f3"
+  }
+}
